@@ -5,7 +5,7 @@ import SearchableContactList from './comp/searchableContactList/SearchableContac
 class ContactListPage extends React.Component {
   render() {
     return (
-      <div>
+      <div className={ 'contact-list-page' }>
         <SearchableContactList />
       </div>
     )

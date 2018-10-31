@@ -1,13 +1,23 @@
+.contact-list-page {
+  background-color: #e7e7e7;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 .search-contacts {
-  border: 1px solid blue;
   padding: 10px;
 }
 
 .contact-list {
+  padding: 10px;
 }
 
 .contact-list-item {
   padding: 10px;
-  margin-bottom: 5px;
-  background-color: #d8ffff;
+  margin-bottom: 10px;
+  background-color: #fff;
+  cursor: pointer;
 }

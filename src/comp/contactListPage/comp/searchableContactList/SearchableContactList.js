@@ -9,7 +9,7 @@ class SearchableContactList extends React.Component {
   };
 
   handleSearch = (searchCriteria) => this.setState({
-    contacts: importedContacts.filter(contact => contact.name.includes(searchCriteria)).map(contact => ({ ...contact }))
+    contacts: importedContacts.filter(contact => contact.name.toLowerCase().includes(searchCriteria.toLowerCase())).map(contact => ({ ...contact }))
   });
 
   render() {
