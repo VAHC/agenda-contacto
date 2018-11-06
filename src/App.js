@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import ContactListPage from './comp/contactListPage/ContactListPage';
+import AppBody from './comp/layout/AppBody';
+import { BrowserRouter as Router } from 'react-router-dom'
+import SideBar from './comp/layout/SideBar';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <ContactListPage />
-      </div>
+      <Router>
+        <div className="App">
+          <SideBar />
+          <AppBody />
+        </div>
+      </Router>
     );
   }
 }

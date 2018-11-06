@@ -1,15 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContactListItem = ({ contact }) => (
-  <div className={ 'contact-list-item'}>
-    <div>{ `${ contact.lastName }, ${ contact.name }` }</div>
-    <div>{ contact.email }</div>
-  </div>
-);
+const ContactListItem = ({ contact, onEdit }) => {
+  const handleContactClick = () => onEdit(contact);
+
+  return (
+    <div className={ 'contact-list-item'} onClick={ handleContactClick }>
+      <div>{ `${ contact.lastName }, ${ contact.name }` }</div>
+      <div>{ contact.email }</div>
+    </div>
+  );
+};
 
 ContactListItem.propTypes = {
-  contact: PropTypes.object.isRequired
+  contact: PropTypes.object.isRequired,
+  onEdit: PropTypes.func,
+};
+
+ContactListItem.defaultProps = {
+  onEdit: () => null
 };
 
 export default ContactListItem;
