@@ -31,8 +31,7 @@ class ContactForm extends React.Component {
           <form onSubmit={ this.handleFormSubmit } autoComplete={ 'offfff' }>
             <TextField value={ name } onChange={ this.handleInputChange } name={ 'name' } label={ 'Nombre' } fullWidth />
             <TextField value={ lastName } onChange={ this.handleInputChange } name={ 'lastName' } label={ 'Apellido' } fullWidth />
-            {/*<label>Name: <input name={ 'name' } onChange={ this.handleInputChange } value={ name } /></label>*/}
-            <label>Email: <input name={ 'email' }  onChange={ this.handleInputChange } value={ email }/></label>
+            <TextField value={ email } onChange={ this.handleInputChange } name={ 'email' } label={ 'email' } fullWidth />
             <input type="submit" value={ 'Save' } />
           </form>
         </div>
